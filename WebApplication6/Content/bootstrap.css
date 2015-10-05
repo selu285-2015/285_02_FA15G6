@@ -6286,7 +6286,8 @@ button.close {
   bottom: -10px;
 }
 .carousel {
-  position: relative;
+   margin-bottom: 0;
+    padding: 0 40px 20px 40px;
 }
 .carousel-inner {
   position: relative;
@@ -6369,7 +6370,7 @@ button.close {
   top: 0;
   left: 0;
   bottom: 0;
-  width: 15%;
+  width: 8%;
   opacity: 0.5;
   filter: alpha(opacity=50);
   font-size: 20px;
