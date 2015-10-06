@@ -5,6 +5,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
@@ -18,6 +19,7 @@ namespace WebApplication6.Controllers
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
+        
         public AccountController()
         {
         }
@@ -42,6 +44,7 @@ namespace WebApplication6.Controllers
 
         public ApplicationUserManager UserManager
         {
+
             get
             {
                 return _userManager ?? HttpContext.GetOwinContext().GetUserManager<ApplicationUserManager>();
@@ -151,38 +154,93 @@ namespace WebApplication6.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
-                var result = await UserManager.CreateAsync(user, model.Password);
+                var user = new ApplicationUser { UserName = model.Username, Email = model.email };
+                user.email = model.email;
+                user.ConfirmedEmail = false;
+
+                var result = await UserManager.CreateAsync(user , model.Password);
                 if (result.Succeeded)
                 {
-                    await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
-                    
-                    // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
-                    // Send an email with this link
-                    // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
-                    // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
-                    // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
 
-                    return RedirectToAction("Index", "Home");
+                    System.Net.Mail.MailMessage message = new System.Net.Mail.MailMessage(new System.Net.Mail.MailAddress("mymaneattractionadmin@gmail.com" , "Web Regestration") , new System.Net.Mail.MailAddress(user.email));
+                    message.Subject = "Confirm Account";
+                    message.Body = string.Format("Hello User, <BR/> Thank you for making an account with Mane Attraction. Click on the link provided to confirm your email address. <a href=\"{1}\" title=\"User Email Confirm\">{1} </a>", user.UserName, Url.Action("ConfirmEmail", "Account", new { Token = user.Id, Email = user.email }, Request.Url.Scheme));
+                    message.IsBodyHtml = true;
+                    System.Net.Mail.SmtpClient smtp = new System.Net.Mail.SmtpClient("smtp.maneattraction.com");
+                    smtp.Credentials = new System.Net.NetworkCredential("selugroup6.maneattraction@gmail.com", "password");
+                    smtp.EnableSsl = true;
+                    smtp.Send(message);
+
                 }
-                AddErrors(result);
+                else
+                {
+                    AddErrors(result);
+
+                }
             }
 
-            // If we got this far, something failed, redisplay form
             return View(model);
         }
 
+        private async Task SignInAsync(ApplicationUser user, bool isPersistent)
+        {
+            AuthenticationManager.SignOut(DefaultAuthenticationTypes.ExternalCookie);
+            var claimsIdentity = await _userManager.CreateIdentityAsync(user, DefaultAuthenticationTypes.ApplicationCookie);
+            AuthenticationManager.SignIn(new AuthenticationProperties { IsPersistent = isPersistent }, claimsIdentity);
+        }
+
+/*        bool IsValidEmail(string email)
+        {
+
+
+
+
+        }
+        */
         //
         // GET: /Account/ConfirmEmail
+        [HttpPost]
         [AllowAnonymous]
-        public async Task<ActionResult> ConfirmEmail(string userId, string code)
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> ConfirmEmail(string Token, string Email)
         {
-            if (userId == null || code == null)
+
+            bool check = true;
+            
+            // Use to check for a Southeastern email
+            //var foo = new EmailAddressAttribute();
+            //check = foo.IsValid("someone@selu.edu");
+
+            ApplicationUser user = this.UserManager.FindById(Token);
+            if (user != null && check == true)
             {
-                return View("Error");
+                if (user.Email == Email)
+                {
+                    user.ConfirmedEmail = true;
+                    await UserManager.UpdateAsync(user);    
+                    await SignInAsync(user, isPersistent: false);
+                    return RedirectToAction("Index", "Home", new { ConfirmedEmail = user.email });
+                }
+                else
+                {
+
+                    return RedirectToAction("Confirm", "Account", new { Email = user.email });
+
+                }
+
             }
-            var result = await UserManager.ConfirmEmailAsync(userId, code);
-            return View(result.Succeeded ? "ConfirmEmail" : "Error");
+            else
+            {
+                return RedirectToAction("Confirm", "Account", new { Email = "" });
+            }
+
+        }
+
+        [AllowAnonymous]
+        public ActionResult Confirm(string Email)
+        {
+            ViewBag.Email = Email;
+            return View();
         }
 
         //
