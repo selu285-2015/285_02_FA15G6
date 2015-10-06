@@ -1111,6 +1111,7 @@ a:focus {
   color: #23527c;
   text-decoration: underline;
 }
+
 a:focus {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
@@ -6285,8 +6286,46 @@ button.close {
   border-left-color: #ffffff;
   bottom: -10px;
 }
+.user-row {
+    margin-bottom: 14px;
+}
+
+.user-row:last-child {
+    margin-bottom: 0;
+}
+
+.dropdown-user {
+    margin: 13px 0;
+    padding: 5px;
+    height: 100%;
+}
+
+.dropdown-user:hover {
+    cursor: pointer;
+}
+
+.table-user-information > tbody > tr {
+    border-top: 1px solid rgb(221, 221, 221);
+}
+
+.table-user-information > tbody > tr:first-child {
+    border-top: 0;
+}
+
+
+.table-user-information > tbody > tr > td {
+    border-top: 0;
+}
+.toppad
+{margin-top:0px;
+ margin-left:400px;
+
+}
+
+
 .carousel {
-  position: relative;
+   margin-bottom: 0;
+    padding: 0 40px 20px 40px;
 }
 .carousel-inner {
   position: relative;
@@ -6369,7 +6408,7 @@ button.close {
   top: 0;
   left: 0;
   bottom: 0;
-  width: 15%;
+  width: 8%;
   opacity: 0.5;
   filter: alpha(opacity=50);
   font-size: 20px;
