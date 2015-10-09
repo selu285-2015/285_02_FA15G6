@@ -9,7 +9,7 @@
 
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top" style="background-color: honeydew currentColor">
+    <div class="navbar navbar-inverse navbar-fixed-top style="background-color: honeydew currentColor">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -21,24 +21,16 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Login", "Login", "Account")</li>
+                    <li>@Html.ActionLink("Register", "Register", "Account")</li>
                 </ul>
-                @Html.Partial("_LoginPartial")
             </div>
         </div>
     </div>
-    <div class="jumbotron" style="background-color: #006600">
-        <div class="container">
-            <h1 class="text-center" style="color: #FFCC00; font-family: 'Century Schoolbook'; font-weight: normal"><em><strong>The Mane Attraction</strong></em></h1>
-        </div>
-    </div>
-    
     <div class="container body-content">
         @RenderBody()
-        <div class="container body-content">
-            <hr />
-        </div>
+
         <p class="auto-style2">Project Red</p>
     </div>
 

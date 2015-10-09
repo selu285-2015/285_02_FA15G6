@@ -3063,20 +3063,20 @@ fieldset[disabled] a.btn {
   pointer-events: none;
 }
 .btn-default {
-  color: black;
-  background-color: white;
-  border-color: grey;
+  color: #ffd700;
+  background-color: #f0fff0;
+  border-color: #cccccc;
 }
 .btn-default:focus,
 .btn-default.focus {
-  color: black;
-  background-color: grey;
-  border-color: dimgrey;
+  color: #ffd700;
+  background-color: #bdffbd;
+  border-color: #8c8c8c;
 }
 .btn-default:hover {
-  color: black;
-  background-color: grey;
-  border-color: dimgrey;
+  color: #ffd700;
+  background-color: #bdffbd;
+  border-color: #adadad;
 }
 .btn-default:active,
 .btn-default.active,
@@ -3094,9 +3094,9 @@ fieldset[disabled] a.btn {
 .btn-default:active.focus,
 .btn-default.active.focus,
 .open > .dropdown-toggle.btn-default.focus {
-  color: black;
-  background-color: white;
-  border-color: grey;
+  color: #ffd700;
+  background-color: #99ff99;
+  border-color: #8c8c8c;
 }
 .btn-default:active,
 .btn-default.active,
@@ -3125,19 +3125,19 @@ fieldset[disabled] .btn-default.active {
   border-color: #cccccc;
 }
 .btn-default .badge {
-  color: black;
-  background-color: white;
+  color: #f0fff0;
+  background-color: #ffd700;
 }
 .btn-primary {
-  color: black;
-  background-color: white;
-  border-color: grey;
+  color: #ffffff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
 }
 .btn-primary:focus,
 .btn-primary.focus {
-  color: black;
-  background-color: grey;
-  border-color: dimgrey;
+  color: #ffffff;
+  background-color: #286090;
+  border-color: #122b40;
 }
 .btn-primary:hover {
   color: #ffffff;
@@ -5011,9 +5011,9 @@ a.badge:focus {
   margin-left: 3px;
 }
 .jumbotron {
-  padding-top: 0px !important;
-  padding-bottom: 0px !important;
-  margin-bottom: 0px !important; 
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
   color: inherit;
   background-color: #eeeeee;
 }
@@ -5031,7 +5031,7 @@ a.badge:focus {
 }
 .container .jumbotron,
 .container-fluid .jumbotron {
-  border-radius: 0px;
+  border-radius: 6px;
 }
 .jumbotron .container {
   max-width: 100%;
@@ -5043,8 +5043,8 @@ a.badge:focus {
   }
   .container .jumbotron,
   .container-fluid .jumbotron {
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
   .jumbotron h1,
   .jumbotron .h1 {
@@ -6838,15 +6838,4 @@ button.close {
   .hidden-print {
     display: none !important;
   }
-}
-
-.my-button{
-    @include button-varient(black, white, grey);
-}
-
-a.presentbtn{
-    display: block;
-    width: 15px;
-    height: 25px;
-    text-indent: -9999px;
 }
