@@ -195,7 +195,7 @@ table {
 }
 td,
 th {
-  padding: 0;
+  padding: 5px;
 }
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print {
@@ -262,7 +262,7 @@ th {
   }
   .table td,
   .table th {
-    background-color: #fff !important;
+    background-color: lightseagreen !important;
   }
   .table-bordered th,
   .table-bordered td {
@@ -2257,7 +2257,7 @@ pre code {
   }
 }
 table {
-  background-color: transparent;
+  background-color: #FBB917;
 }
 caption {
   padding-top: 8px;
@@ -2288,7 +2288,8 @@ th {
   vertical-align: bottom;
   border-bottom: 2px solid #dddddd;
 }
-.table > caption + thead > tr:first-child > th,
+.
+ > caption + thead > tr:first-child > th,
 .table > colgroup + thead > tr:first-child > th,
 .table > thead:first-child > tr:first-child > th,
 .table > caption + thead > tr:first-child > td,
@@ -2333,7 +2334,7 @@ th {
 }
 table col[class*="col-"] {
   position: static;
-  float: none;
+  float:none ;
   display: table-column;
 }
 table td[class*="col-"],
@@ -2468,7 +2469,7 @@ table th[class*="col-"] {
   .table-responsive > .table > thead > tr > td,
   .table-responsive > .table > tbody > tr > td,
   .table-responsive > .table > tfoot > tr > td {
-    white-space: nowrap;
+    white-space: pre-line;
   }
   .table-responsive > .table-bordered {
     border: 0;
