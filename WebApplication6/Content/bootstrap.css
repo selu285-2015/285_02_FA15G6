@@ -2260,7 +2260,11 @@ pre code {
   }
 }
 table {
+<<<<<<< HEAD
   background-color: #FDD017;
+=======
+  background-color: #FBB917;
+>>>>>>> origin/master
 }
 caption {
   padding-top: 50px;
