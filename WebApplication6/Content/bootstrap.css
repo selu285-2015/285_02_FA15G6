@@ -126,6 +126,7 @@ textarea {
   color: inherit;
   font: inherit;
   margin: 0;
+  border:2px solid green;
 }
 button {
   overflow: visible;
@@ -184,7 +185,7 @@ legend {
   padding: 0;
 }
 textarea {
-  overflow: auto;
+  overflow: auto ;
 }
 optgroup {
   font-weight: bold;
@@ -195,7 +196,7 @@ table {
 }
 td,
 th {
-  padding: 0;
+  padding: 5px;
 }
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print {
@@ -262,7 +263,7 @@ th {
   }
   .table td,
   .table th {
-    background-color: #fff !important;
+    background-color: lightseagreen !important;
   }
   .table-bordered th,
   .table-bordered td {
@@ -1088,11 +1089,12 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.42857143;
-  color: #333333;
-  background-color: #ffffff;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333333;
+    background-color: #F8F8F8;
+    
 }
 input,
 button,
@@ -1130,10 +1132,11 @@ img {
 .carousel-inner > .item > a > img {
   display: block;
   max-width: 100%;
-  height: auto;
+  height: 50px;
 }
 .img-rounded {
   border-radius: 6px;
+  
 }
 .img-thumbnail {
   padding: 4px;
@@ -2257,12 +2260,12 @@ pre code {
   }
 }
 table {
-  background-color: transparent;
+  background-color: #FDD017;
 }
 caption {
-  padding-top: 8px;
+  padding-top: 50px;
   padding-bottom: 8px;
-  color: #777777;
+  color: green;
   text-align: left;
 }
 th {
@@ -2271,6 +2274,7 @@ th {
 .table {
   width: 100%;
   max-width: 100%;
+  margin-top:0px;
   margin-bottom: 20px;
 }
 .table > thead > tr > th,
@@ -2288,7 +2292,8 @@ th {
   vertical-align: bottom;
   border-bottom: 2px solid #dddddd;
 }
-.table > caption + thead > tr:first-child > th,
+.
+ > caption + thead > tr:first-child > th,
 .table > colgroup + thead > tr:first-child > th,
 .table > thead:first-child > tr:first-child > th,
 .table > caption + thead > tr:first-child > td,
@@ -2323,7 +2328,7 @@ th {
 }
 .table-bordered > thead > tr > th,
 .table-bordered > thead > tr > td {
-  border-bottom-width: 2px;
+  border-bottom-width: 1px;
 }
 .table-striped > tbody > tr:nth-of-type(odd) {
   background-color: #f9f9f9;
@@ -2333,7 +2338,7 @@ th {
 }
 table col[class*="col-"] {
   position: static;
-  float: none;
+  float:none ;
   display: table-column;
 }
 table td[class*="col-"],
@@ -2468,7 +2473,7 @@ table th[class*="col-"] {
   .table-responsive > .table > thead > tr > td,
   .table-responsive > .table > tbody > tr > td,
   .table-responsive > .table > tfoot > tr > td {
-    white-space: nowrap;
+    white-space: pre-line;
   }
   .table-responsive > .table-bordered {
     border: 0;
@@ -2735,7 +2740,8 @@ select[multiple].input-sm {
   height: 30px;
   line-height: 30px;
 }
-.form-group-sm textarea.form-control,
+.form-group-sm 
+rea.form-control,
 .form-group-sm select[multiple].form-control {
   height: auto;
 }
@@ -5053,10 +5059,10 @@ a.badge:focus {
 }
 .thumbnail {
   display: block;
-  padding: 4px;
-  margin-bottom: 20px;
+  padding: 3px;
+  margin-bottom: 0;
   line-height: 1.42857143;
-  background-color: #ffffff;
+  background-color: gold;
   border: 1px solid #dddddd;
   border-radius: 4px;
   -webkit-transition: border 0.2s ease-in-out;
@@ -5066,7 +5072,7 @@ a.badge:focus {
 .thumbnail > img,
 .thumbnail a > img {
   margin-left: auto;
-  margin-right: auto;
+  margin-right:auto;
 }
 a.thumbnail:hover,
 a.thumbnail:focus,
@@ -5253,7 +5259,8 @@ a.thumbnail.active {
   margin-top: 0;
 }
 .media,
-.media-body {
+.media-
+ {
   zoom: 1;
   overflow: hidden;
 }
@@ -6317,7 +6324,7 @@ button.close {
     border-top: 0;
 }
 .toppad
-{margin-top:0px;
+{margin-top:20px;
  margin-left:400px;
 
 }
@@ -6325,7 +6332,7 @@ button.close {
 
 .carousel {
    margin-bottom: 0;
-    padding: 0 40px 20px 40px;
+    padding: 10px 10px 10px 10px;
 }
 .carousel-inner {
   position: relative;
@@ -6377,6 +6384,7 @@ button.close {
 .carousel-inner > .next,
 .carousel-inner > .prev {
   display: block;
+  height:50px;
 }
 .carousel-inner > .active {
   left: 0;
@@ -6420,7 +6428,8 @@ button.close {
   background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
   background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.0001)));
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
+  
+  background-image: linear-gradient(to right, gold 0%, white 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
 }
@@ -6430,7 +6439,7 @@ button.close {
   background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
   background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.0001)), to(rgba(0, 0, 0, 0.5)));
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background-image: linear-gradient(to right, white 0%, gold 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
 }
@@ -6500,9 +6509,9 @@ button.close {
 }
 .carousel-indicators .active {
   margin: 0;
-  width: 12px;
-  height: 12px;
-  background-color: #ffffff;
+  width: 10px;
+  height: 10px;
+  background-color: white;
 }
 .carousel-caption {
   position: absolute;
