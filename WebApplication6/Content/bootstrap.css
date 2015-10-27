@@ -126,7 +126,7 @@ textarea {
   color: inherit;
   font: inherit;
   margin: 0;
-  border:2px solid green;
+  border:1px solid gray;
 }
 button {
   overflow: visible;
@@ -193,10 +193,27 @@ optgroup {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+  margin: 10px;
 }
 td,
 th {
   padding: 5px;
+}
+
+#questionarie tr:nth-child(even) {
+    background-color:#dcdcdc;
+    
+}
+#questionarie tr:nth-child(odd) {
+    background-color: #bebebe;     /*0A7D21*/
+    
+}
+#questionaire td {
+    background-color: black;
+}
+#questionaire th,td{
+    padding:15px;
+    
 }
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print {
@@ -1093,16 +1110,19 @@ body {
     font-size: 14px;
     line-height: 1.42857143;
     color: #333333;
-    background-color: #F8F8F8;
+    background-color: #f0f4ec;
     
 }
 input,
 button,
 select,
+
 textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  margin:5px;
+ 
 }
 a {
   color: #337ab7;
@@ -2647,10 +2667,13 @@ input[type="search"] {
 }
 .radio,
 .checkbox {
-  position: relative;
+ width: 19px;
+  height: 25px;
+  padding: 0 5px 0 0;
+  background: white;
   display: block;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  clear: left;
+  float: left;
 }
 .radio label,
 .checkbox label {
