@@ -243,7 +243,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Photos\285PICTHATISCHEAT1.png" />
+    <Content Include="Photos\0000003.jpg" />
     <Content Include="Photos\lions1.jpeg" />
     <Content Include="Photos\lions2.jpeg" />
     <Content Include="Photos\pug0.jpg" />
