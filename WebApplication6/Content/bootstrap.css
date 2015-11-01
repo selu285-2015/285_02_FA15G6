@@ -15,12 +15,15 @@
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
-  font-family: sans-serif;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    
 }
 body {
   margin: 0;
+ background-image: url('../Photos/0000003.jpg') !important;
+ background-size:cover;
 }
 article,
 aside,
@@ -126,6 +129,8 @@ textarea {
   color: inherit;
   font: inherit;
   margin: 0;
+  border:2px solid green;
+  border:1px solid gray;
 }
 button {
   overflow: visible;
@@ -155,6 +160,7 @@ input {
 }
 input[type="checkbox"],
 input[type="radio"] {
+    transform:scale(1.2) !important;
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
@@ -184,7 +190,7 @@ legend {
   padding: 0;
 }
 textarea {
-  overflow: auto;
+  overflow: auto ;
 }
 optgroup {
   font-weight: bold;
@@ -192,10 +198,27 @@ optgroup {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+  margin: 10px;
 }
 td,
 th {
   padding: 5px;
+}
+
+#questionarie tr:nth-child(even) {
+    background-color:#dcdcdc;
+    
+}
+#questionarie tr:nth-child(odd) {
+    background-color: #bebebe;     /*0A7D21*/
+    
+}
+#questionaire td {
+    background-color: black;
+}
+#questionaire th,td{
+    padding:15px;
+    
 }
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print {
@@ -1088,19 +1111,24 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.42857143;
-  color: #333333;
-  background-color: #ffffff;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333333;
+    background-color: #F8F8F8;
+    background-color: #f0f4ec;
+    
 }
 input,
 button,
 select,
+
 textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  margin:5px;
+ 
 }
 a {
   color: #337ab7;
@@ -1130,10 +1158,11 @@ img {
 .carousel-inner > .item > a > img {
   display: block;
   max-width: 100%;
-  height: auto;
+  height: 50px;
 }
 .img-rounded {
   border-radius: 6px;
+  
 }
 .img-thumbnail {
   padding: 4px;
@@ -2257,12 +2286,16 @@ pre code {
   }
 }
 table {
+<<<<<<< HEAD
+  background-color: #FDD017;
+=======
   background-color: #FBB917;
+>>>>>>> origin/master
 }
 caption {
-  padding-top: 8px;
+  padding-top: 50px;
   padding-bottom: 8px;
-  color: #777777;
+  color: green;
   text-align: left;
 }
 th {
@@ -2271,6 +2304,7 @@ th {
 .table {
   width: 100%;
   max-width: 100%;
+  margin-top:0px;
   margin-bottom: 20px;
 }
 .table > thead > tr > th,
@@ -2324,7 +2358,7 @@ th {
 }
 .table-bordered > thead > tr > th,
 .table-bordered > thead > tr > td {
-  border-bottom-width: 2px;
+  border-bottom-width: 1px;
 }
 .table-striped > tbody > tr:nth-of-type(odd) {
   background-color: #f9f9f9;
@@ -2640,9 +2674,15 @@ input[type="search"] {
 .radio,
 .checkbox {
   position: relative;
+ width: 19px;
+  height: 25px;
+  padding: 0 5px 0 0;
+  background: white;
   display: block;
   margin-top: 10px;
   margin-bottom: 10px;
+  clear: left;
+  float: left;
 }
 .radio label,
 .checkbox label {
@@ -2736,7 +2776,8 @@ select[multiple].input-sm {
   height: 30px;
   line-height: 30px;
 }
-.form-group-sm textarea.form-control,
+.form-group-sm 
+rea.form-control,
 .form-group-sm select[multiple].form-control {
   height: auto;
 }
@@ -5054,10 +5095,10 @@ a.badge:focus {
 }
 .thumbnail {
   display: block;
-  padding: 4px;
-  margin-bottom: 20px;
+  padding: 3px;
+  margin-bottom: 0;
   line-height: 1.42857143;
-  background-color: #ffffff;
+  background-color: gold;
   border: 1px solid #dddddd;
   border-radius: 4px;
   -webkit-transition: border 0.2s ease-in-out;
@@ -5067,7 +5108,7 @@ a.badge:focus {
 .thumbnail > img,
 .thumbnail a > img {
   margin-left: auto;
-  margin-right: auto;
+  margin-right:auto;
 }
 a.thumbnail:hover,
 a.thumbnail:focus,
@@ -5254,7 +5295,8 @@ a.thumbnail.active {
   margin-top: 0;
 }
 .media,
-.media-body {
+.media-
+ {
   zoom: 1;
   overflow: hidden;
 }
@@ -6318,7 +6360,7 @@ button.close {
     border-top: 0;
 }
 .toppad
-{margin-top:0px;
+{margin-top:20px;
  margin-left:400px;
 
 }
@@ -6326,7 +6368,7 @@ button.close {
 
 .carousel {
    margin-bottom: 0;
-    padding: 0 40px 20px 40px;
+    padding: 10px 10px 10px 10px;
 }
 .carousel-inner {
   position: relative;
@@ -6378,6 +6420,7 @@ button.close {
 .carousel-inner > .next,
 .carousel-inner > .prev {
   display: block;
+  height:50px;
 }
 .carousel-inner > .active {
   left: 0;
@@ -6421,7 +6464,8 @@ button.close {
   background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
   background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.0001)));
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
+  
+  background-image: linear-gradient(to right, gold 0%, white 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
 }
@@ -6431,7 +6475,7 @@ button.close {
   background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
   background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.0001)), to(rgba(0, 0, 0, 0.5)));
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background-image: linear-gradient(to right, white 0%, gold 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
 }
@@ -6501,9 +6545,9 @@ button.close {
 }
 .carousel-indicators .active {
   margin: 0;
-  width: 12px;
-  height: 12px;
-  background-color: #ffffff;
+  width: 10px;
+  height: 10px;
+  background-color: white;
 }
 .carousel-caption {
   position: absolute;

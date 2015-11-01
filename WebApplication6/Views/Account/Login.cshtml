@@ -1,4 +1,6 @@
-﻿@{
+﻿@model WebApplication6.Models.LoginViewModel
+
+@{
     ViewBag.Title = "Log in";
 }
 
@@ -6,7 +8,7 @@
 <div class="row">
     <div class="col-md-8">
         <section id="loginForm">
-            {
+
                 @Html.AntiForgeryToken()
                 <h4>Use a local account to log in.</h4>
                 <hr />
@@ -19,7 +21,6 @@
                 <p>
                     @Html.ActionLink("Register as a new user", "Register")
                 </p>
-                            }
         </section>
     </div>
   </div>

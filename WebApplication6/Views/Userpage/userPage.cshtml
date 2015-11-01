@@ -1,28 +1,72 @@
-﻿@{
+﻿
+@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<!DOCTYPE html>
-
-<html>
+@{ 
+    ViewBag.Title = "User Page";
+}
 <head>
     <meta name="viewport" content="width=device-width" />
     <title></title>
 </head>
 <body style="margin: 10px; padding: 30px; font-family: 'Trebuchet MS',verdana;">
     <h1>Welcome! </h1>
-    <table width="0" style="height: 100%;" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-            <td width="0" valign="top" bgcolor="white">
-                <div id="pic">
-                    <img src="~/Photos/Pug.jpg" width="400" height="400" />
+       
+                
+    <img id="main pic" src="~/Photos/Pug.jpg" width="400" height="400" />
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <div id="Carousel" class="carousel slide">
+
+                    <ol class="carousel-indicators">
+                        <li data-target="#Carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#Carousel" data-slide-to="1"></li>
+                        <li data-target="#Carousel" data-slide-to="2"></li>
+                    </ol>
+
+                    <!-- Carousel items -->
+                    <div class="carousel-inner">
+
+                        <div class="item active">
+                            <div class="row">
+                                <div id="pic1" class="col-md-3"><a href="#" class="thumbnail" onclick="myFunction()"><img src="~/Photos/pug0.jpg" /></a></div>
+                                <div class="col-md-3"><a href="#" class="thumbnail"><img src="~/Photos/pug1.jpg"></a></div>
+                                <div class="col-md-3"><a href="#" class="thumbnail"><img src="~/Photos/pug2.jpg"></a></div>
+                                <div class="col-md-3"><a href="#" class="thumbnail"><img src="~/Photos/pug3.jpg"></a></div>
+                            </div><!--.row-->
+                        </div><!--.item-->
+
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-md-3"><a href="#" class="thumbnail"><img src="~/Photos/pug4.jpg" /></a></div>
+                                <div class="col-md-3"><a href="#" class="thumbnail"><img src="~/Photos/pug5.jpg"></a></div>
+                                <div class="col-md-3"><a href="#" class="thumbnail"><img src="~/Photos/pug6.jpg"></a></div>
+                                <div class="col-md-3"><a href="#" class="thumbnail"><img src="~/Photos/pug7.jpg"></a></div>
+                            </div><!--.row-->
+                        </div><!--.item-->
+
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-md-3"><a href="#" class="thumbnail"><img src="~/Photos/pug8.jpg" /></a></div>
+                                <div class="col-md-3"><a href="#" class="thumbnail"><img src="~/Photos/pug9.jpg"></a></div>
+                                <div class="col-md-3"><a href="#" class="thumbnail"><img src="~/Photos/pug10.jpg"></a></div>
+                                <div class="col-md-3"><a href="#" class="thumbnail"><img src="~/Photos/pug11.jpg"></a></div>
+                            </div><!--.row-->
+                        </div><!--.item-->
+
+                    </div><!--.carousel-inner-->
+                    <a data-slide="prev" href="#Carousel" class="left carousel-control">‹</a>
+                    <a data-slide="next" href="#Carousel" class="right carousel-control">›</a>
+                </div><!--.Carousel-->
+
+            </div>
+        </div>
+    </div><!--.container-->
 
 
-                </div>
-            </td>
-            <td width="0" valign="top" bgcolor="white">
-
-                <div id="table">
+               
                     <table border="1" style="width:75%">
                         <caption>User Information</caption>
                         <tr>
@@ -54,62 +98,17 @@
                             <td>Computer Science</td>
                         </tr>
                     </table>
-                </div>
-            </td>
-        <tr>
-            <td colspan="2" align="left" height="20" bgcolor="white">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-5">
-                            <div id="Carousel" class="carousel slide">
+    <script type="text/javascript">
+        function myFunction() {
+            var image = document.getElementById("main pic");
 
-                                <ol class="carousel-indicators">
-                                    <li data-target="#Carousel" data-slide-to="0" class="active"></li>
-                                    <li data-target="#Carousel" data-slide-to="1"></li>
-                                    <li data-target="#Carousel" data-slide-to="2"></li>
-                                </ol>
+            image.src = "http://localhost:53460/Userpage/Photos/pug0.jpg";
+           
+        }
+    </script>
 
-                                <!-- Carousel items -->
-                                <div class="carousel-inner">
-
-                                    <div class="item active">
-                                        <div class="row">
-                                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
-                                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
-                                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
-                                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
-                                        </div><!--.row-->
-                                    </div><!--.item-->
-
-                                    <div class="item">
-                                        <div class="row">
-                                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
-                                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
-                                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
-                                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
-                                        </div><!--.row-->
-                                    </div><!--.item-->
-
-                                    <div class="item">
-                                        <div class="row">
-                                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
-                                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
-                                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
-                                            <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
-                                        </div><!--.row-->
-                                    </div><!--.item-->
-
-                                </div><!--.carousel-inner-->
-                                <a data-slide="prev" href="#Carousel" class="left carousel-control">‹</a>
-                                <a data-slide="next" href="#Carousel" class="right carousel-control">›</a>
-                            </div><!--.Carousel-->
-
-                        </div>
-                    </div>
-                </div><!--.container-->
-            </td>
-        </tr>
-</table>
 
 </body>
-</html>
+
+
+
