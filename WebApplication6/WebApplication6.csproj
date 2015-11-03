@@ -288,11 +288,8 @@
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Userpage\userPage.cshtml" />
-<<<<<<< HEAD
     <Content Include="Views\Account\confirmEmail.cshtml" />
-=======
     <Content Include="Views\Questionaire\QuestionaireMain.cshtml" />
->>>>>>> origin/master
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Default\" />
