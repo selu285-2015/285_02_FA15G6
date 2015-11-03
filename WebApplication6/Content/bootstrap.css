@@ -129,7 +129,6 @@ textarea {
   color: inherit;
   font: inherit;
   margin: 0;
-  border:2px solid green;
   border:1px solid gray;
 }
 button {
@@ -1115,7 +1114,6 @@ body {
     font-size: 14px;
     line-height: 1.42857143;
     color: #333333;
-    background-color: #F8F8F8;
     background-color: #f0f4ec;
     
 }
@@ -2673,14 +2671,11 @@ input[type="search"] {
 }
 .radio,
 .checkbox {
-  position: relative;
  width: 19px;
   height: 25px;
   padding: 0 5px 0 0;
   background: white;
   display: block;
-  margin-top: 10px;
-  margin-bottom: 10px;
   clear: left;
   float: left;
 }
