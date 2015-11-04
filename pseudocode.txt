@@ -1,0 +1,47 @@
+import answers1;
+import answersN;
+
+//This algorithm compares User 1 with other users based on answers of a questionnaire.  Each answer is given an int value.
+//In this case, user 1 is the user presently at the keyboard and wants to see their matches.
+
+public static int Algorithm(int answers){
+
+int h = 0;
+int b =0;
+int answer1=0; //Answer from user 1
+int answerN =0; //Answer from user N (other users)
+int a=0; // # of Users
+int i=0; // User # / first counter
+int x=0;  // # of Questions
+int j=0; //Question # / counter
+int y=0;  // Acceptable range
+boolean match = false;
+int perc=0;  //Match percentage. 
+int sum =0; // Sum of ranges
+int abs = 0; //Absolute value of range
+
+//Match perc 
+	for (h = b; h <= length; h++){ //Cycle through User 1's answers.  Counter increments through questions
+	for (i = a; i <= u.length; i++){ //Cycles through all other users to compare compatibility. Counter increments to next user
+	for (j = x; j <= c.length; i++) { //Cycles through each users' questionnaire answers. Counter increments to next answer in User N's questionnaire
+	range = (answer1 - answer2)*10; // Compare answers to current question.  The lower the range, the greater the compatibility.
+	abs = Math.Abs(range);
+	sum = sum + abs; //This adds and stores the ranges, using absolute value of each range to avoid negative sums.
+	
+	
+	}
+	score = sum/x; //Averages the ranges based on the number of questions.
+	perc = 100 - (score); //Since the lower the score means greater the compatibility, then we find the percentage by subtracting the score from 100.
+	
+		if (perc <= 60){  //Tests for minimum criteria to return a match.
+		match =  true;
+	System.out.println(User1 + "is " perc + "compatible with " + UserN);
+		}
+		else{
+		match = false;
+		}
+	return match;
+	}
+	}
+}
+		
