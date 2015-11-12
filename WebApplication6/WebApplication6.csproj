@@ -293,7 +293,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Default\" />
-    <Folder Include="Views\LoginViewModel\" />
     <Folder Include="Views\Manage\" />
   </ItemGroup>
   <ItemGroup>

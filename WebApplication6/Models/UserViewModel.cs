@@ -19,7 +19,7 @@ namespace WebApplication6.Models
         [StringLength(50, MinimumLength = 8, ErrorMessage = "Password must be at least 8 character long.")]
         public string Password { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Compare("Password", ErrorMessage = "Confirm Password does not match Password.")]
+        [Compare("Password", ErrorMessage = "Confirm Password does not match Password.")]
         public string ConfirmPassword { get; set; }
 
         [Required(ErrorMessage = "Please Provide First Name")]
@@ -28,9 +28,9 @@ namespace WebApplication6.Models
         [Required(ErrorMessage = "Please Provide Last Name")]
         public string LastName { get; set; }
 
-        [RegularExpression(@"^([0-9a-zA-Z]([\+\-_\.][0-9a-zA-Z]+)*)+@(selu.edu)$",
-                ErrorMessage = "Please provide valid email id")]
+        [RegularExpression(@"^([0-9a-zA-Z]([\+\-_\.][0-9a-zA-Z]+)*)+@(selu.edu)$" , ErrorMessage = "Please provide valid email id")]
         public string EmailID { get; set; }
+
 
 
 

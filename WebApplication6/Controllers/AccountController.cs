@@ -15,6 +15,7 @@ using WebApplication6.Models;
 using System.Web.Helpers;
 using System.Net.Mail;
 using System.Net;
+using System.Security.Cryptography;
 
 namespace WebApplication6.Controllers
 {
@@ -51,16 +52,20 @@ namespace WebApplication6.Controllers
         {
             if (ModelState.IsValid)
             {
+
                 using (DataBaseEntities db = new DataBaseEntities())
                 {
-                    //u.salt = crypto.generatesalt();
-                    //u.password += u.salt;
-                    //u.password = crypto.hashpassword(u.password);
 
-                    //db.users.add(u);
+                    
+
+                    //U.salt = crypto.generatesalt();
+                    //U.password += U.salt;
+                    //U.password = crypto.hashpassword(U.password);
+
+                    //db.users.add(U);
                     //db.savechanges();
                     //modelstate.clear();
-                    //
+
                     MailMessage m = new MailMessage();
                     SmtpClient sc = new SmtpClient();
                     try
@@ -76,7 +81,6 @@ namespace WebApplication6.Controllers
 
                         sc.EnableSsl = true;
                         sc.Send(m);
-                        Response.Write("Email Send successfully");
                     }
                     catch (Exception ex)
                     {
@@ -84,7 +88,7 @@ namespace WebApplication6.Controllers
                     }
                     
                     //
-
+                    
                     U = null;
                     ViewBag.Message = "Registration Done";
                 }
@@ -99,11 +103,14 @@ namespace WebApplication6.Controllers
             User validate = db.Users.FirstOrDefault(dbUsers => dbUsers.UserName == username);
             if (validate != null)
             {
-  //              if (Crypto.VerifyHashedPassword(validate.Password, password + validate.Salt))
+                if (Crypto.VerifyHashedPassword(validate.Password, password + validate.Salt))
                 {
+
+                    return RedirectToAction("Home", "Index");
+
                 }
             }
-            return RedirectToAction("userPage");
+            return RedirectToAction("Create");
         }
 
     }
