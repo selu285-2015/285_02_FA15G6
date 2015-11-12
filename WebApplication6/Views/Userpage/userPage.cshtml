@@ -12,9 +12,9 @@
 <body style="margin: 10px; padding: 30px; font-family: 'Trebuchet MS',verdana;">
     <h1>Welcome! </h1>
        
-                
-    <img id="main pic" src="~/Photos/Pug.jpg" width="400" height="400" />
-
+     <div style="height:400px; width:487px">           
+        <img id="main pic" src="~/Photos/Pug.jpg" style=" max-height:100%; max-width:100%; min-width:100%" />
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-md-5">
@@ -31,31 +31,31 @@
 
                         <div class="item active">
                             <div class="row">
-                                <div id="pic1" class="col-md-3"><a href="#" class="thumbnail" onclick="myFunction()"><img src="~/Photos/pug0.jpg" /></a></div>
-                                <div class="col-md-3"><a href="#" class="thumbnail"><img src="~/Photos/pug1.jpg"></a></div>
-                                <div class="col-md-3"><a href="#" class="thumbnail"><img src="~/Photos/pug2.jpg"></a></div>
-                                <div class="col-md-3"><a href="#" class="thumbnail"><img src="~/Photos/pug3.jpg"></a></div>
+                                <div id="pic1" class="col-md-3"><a href="#" class="thumbnail" onclick="changePic0()"><img src="~/Photos/Pug.jpg" /></a></div>
+                                <div id="pic1" class="col-md-3"><a href="#" class="thumbnail" onclick="changePic1()"><img src="~/Photos/pug0.jpg" /></a></div>
+                                <div id="pic1" class="col-md-3"><a href="#" class="thumbnail" onclick="changePic2()"><img src="~/Photos/pug1.jpg" /></a></div>
+                                <div id="pic1" class="col-md-3"><a href="#" class="thumbnail" onclick="changePic3()"><img src="~/Photos/pug2.jpg" /></a></div>
                             </div><!--.row-->
                         </div><!--.item-->
 
                         <div class="item">
                             <div class="row">
-                                <div class="col-md-3"><a href="#" class="thumbnail"><img src="~/Photos/pug4.jpg" /></a></div>
-                                <div class="col-md-3"><a href="#" class="thumbnail"><img src="~/Photos/pug5.jpg"></a></div>
-                                <div class="col-md-3"><a href="#" class="thumbnail"><img src="~/Photos/pug6.jpg"></a></div>
-                                <div class="col-md-3"><a href="#" class="thumbnail"><img src="~/Photos/pug7.jpg"></a></div>
+                                <div id="pic1" class="col-md-3"><a href="#" class="thumbnail" onclick="changePic4()"><img src="~/Photos/pug3.jpg" /></a></div>
+                                <div id="pic1" class="col-md-3"><a href="#" class="thumbnail" onclick="changePic5()"><img src="~/Photos/pug4.jpg" /></a></div>
+                                <div id="pic1" class="col-md-3"><a href="#" class="thumbnail" onclick="changePic6()"><img src="~/Photos/pug5.jpg" /></a></div>
+                                <div id="pic1" class="col-md-3"><a href="#" class="thumbnail" onclick="changePic7()"><img src="~/Photos/pug6.jpg" /></a></div>
                             </div><!--.row-->
                         </div><!--.item-->
 
                         <div class="item">
                             <div class="row">
-                                <div class="col-md-3"><a href="#" class="thumbnail"><img src="~/Photos/pug8.jpg" /></a></div>
-                                <div class="col-md-3"><a href="#" class="thumbnail"><img src="~/Photos/pug9.jpg"></a></div>
-                                <div class="col-md-3"><a href="#" class="thumbnail"><img src="~/Photos/pug10.jpg"></a></div>
-                                <div class="col-md-3"><a href="#" class="thumbnail"><img src="~/Photos/pug11.jpg"></a></div>
+                                <div id="pic1" class="col-md-3"><a href="#" class="thumbnail" onclick="changePic8()"><img src="~/Photos/pug7.jpg" /></a></div>
+                                <div id="pic1" class="col-md-3"><a href="#" class="thumbnail" onclick="changePic9()"><img src="~/Photos/pug8.jpg" /></a></div>
+                                <div id="pic1" class="col-md-3"><a href="#" class="thumbnail" onclick="changePic10()"><img src="~/Photos/pug9.jpg" /></a></div>
+                                <div id="pic1" class="col-md-3"><a href="#" class="thumbnail" onclick="changePic11()"><img src="~/Photos/pug10.jpg" /></a></div>
                             </div><!--.row-->
                         </div><!--.item-->
-
+                  
                     </div><!--.carousel-inner-->
                     <a data-slide="prev" href="#Carousel" class="left carousel-control">‹</a>
                     <a data-slide="next" href="#Carousel" class="right carousel-control">›</a>
@@ -99,16 +99,50 @@
                         </tr>
                     </table>
     <script type="text/javascript">
-        function myFunction() {
-            var image = document.getElementById("main pic");
-
-            image.src = "http://localhost:53460/Userpage/Photos/pug0.jpg";
-           
+        function changePic0() {
+            document.getElementById("main pic").src = "http://localhost:53460/Photos/Pug.jpg";
+        }
+        function changePic1() {
+            document.getElementById("main pic").src = "http://localhost:53460/Photos/pug0.jpg";
+        }
+        function changePic2() {
+            document.getElementById("main pic").src = "http://localhost:53460/Photos/pug1.jpg";
+        }
+        function changePic3() {
+            document.getElementById("main pic").src = "http://localhost:53460/Photos/pug2.jpg";
+        }
+        function changePic4() {
+            document.getElementById("main pic").src = "http://localhost:53460/Photos/pug3.jpg";
+        }
+        function changePic5() {
+            document.getElementById("main pic").src = "http://localhost:53460/Photos/pug4.jpg";
+        }
+        function changePic6() {
+            document.getElementById("main pic").src = "http://localhost:53460/Photos/pug5.jpg";
+        }
+        function changePic7() {
+            document.getElementById("main pic").src = "http://localhost:53460/Photos/pug6.jpg";
+        }
+        function changePic8() {
+            document.getElementById("main pic").src = "http://localhost:53460/Photos/pug7.jpg";
+        }
+        function changePic9() {
+            document.getElementById("main pic").src = "http://localhost:53460/Photos/pug8.jpg";
+        }
+        function changePic10() {
+            document.getElementById("main pic").src = "http://localhost:53460/Photos/pug9.jpg";
+        }
+        function changePic11() {
+            document.getElementById("main pic").src = "http://localhost:53460/Photos/pug10.jpg";
+        }
+        function changePic12() {
+            document.getElementById("main pic").src = "http://localhost:53460/Photos/pug11.jpg";
         }
     </script>
 
 
 </body>
+
 
 
 
