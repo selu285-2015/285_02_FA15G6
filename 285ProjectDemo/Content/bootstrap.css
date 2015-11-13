@@ -6797,6 +6797,7 @@ button.close {
     display: none !important;
   }
 }
+<<<<<<< HEAD:285ProjectDemo/Content/bootstrap.css
 .navbar {
   background-image: -webkit-linear-gradient(#484e55, #3a3f44 60%, #313539);
   background-image: -o-linear-gradient(#484e55, #3a3f44 60%, #313539);
@@ -7299,3 +7300,11 @@ a.list-group-item-danger.active:focus {
 .panel-info .panel-heading {
   border-color: #000;
 }
+=======
+.mybutton{
+    color:#000;
+    background-color:#ffffff;
+    border-color:#777777;
+
+}
+>>>>>>> parent of dff457c... commit2:WebApplication6/Content/bootstrap.css
