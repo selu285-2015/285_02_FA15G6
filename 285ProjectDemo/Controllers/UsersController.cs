@@ -48,7 +48,7 @@ namespace _285ProjectDemo.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,FirstName,LastName,Major,Username,Password")] User createUser)
+        public ActionResult Create([Bind(Include = "ID,FirstName,LastName,DateOfBirth,Gender,Interestin,Classification,Major,Username,Password,Email,Questionair")] User createUser)
         {
             if (ModelState.IsValid)
             {
@@ -98,7 +98,7 @@ namespace _285ProjectDemo.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,FirstName,LastName,Major,Username,Password")] User user)
+        public ActionResult Edit([Bind(Include = "ID,FirstName,LastName,DateOfBirth,Gender,Interestin,Classification,Major,Username,Password,Email")] User user)
         {
             if (ModelState.IsValid)
             {
@@ -142,5 +142,6 @@ namespace _285ProjectDemo.Controllers
             }
             base.Dispose(disposing);
         }
+
     }
 }

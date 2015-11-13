@@ -11,107 +11,107 @@ using _285ProjectDemo.Models;
 
 namespace _285ProjectDemo.Controllers
 {
-    public class QuestionController : Controller
+    public class MajorsController : Controller
     {
         private DataContext db = new DataContext();
 
-        // GET: Question
+        // GET: Majors
         public ActionResult Index()
         {
-            return View(db.Questions.ToList());
+            return View(db.Major.ToList());
         }
 
-        // GET: Question/Details/5
+        // GET: Majors/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            QuestionModel questionModel = db.Questions.Find(id);
-            if (questionModel == null)
+            Major major = db.Major.Find(id);
+            if (major == null)
             {
                 return HttpNotFound();
             }
-            return View(questionModel);
+            return View(major);
         }
 
-        // GET: Question/Create
+        // GET: Majors/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Question/Create
+        // POST: Majors/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Title,Category")] QuestionModel questionModel)
+        public ActionResult Create([Bind(Include = "ID,Description")] Major major)
         {
             if (ModelState.IsValid)
             {
-                db.Questions.Add(questionModel);
+                db.Major.Add(major);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(questionModel);
+            return View(major);
         }
 
-        // GET: Question/Edit/5
+        // GET: Majors/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            QuestionModel questionModel = db.Questions.Find(id);
-            if (questionModel == null)
+            Major major = db.Major.Find(id);
+            if (major == null)
             {
                 return HttpNotFound();
             }
-            return View(questionModel);
+            return View(major);
         }
 
-        // POST: Question/Edit/5
+        // POST: Majors/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Title,Category")] QuestionModel questionModel)
+        public ActionResult Edit([Bind(Include = "ID,Description")] Major major)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(questionModel).State = EntityState.Modified;
+                db.Entry(major).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(questionModel);
+            return View(major);
         }
 
-        // GET: Question/Delete/5
+        // GET: Majors/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            QuestionModel questionModel = db.Questions.Find(id);
-            if (questionModel == null)
+            Major major = db.Major.Find(id);
+            if (major == null)
             {
                 return HttpNotFound();
             }
-            return View(questionModel);
+            return View(major);
         }
 
-        // POST: Question/Delete/5
+        // POST: Majors/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            QuestionModel questionModel = db.Questions.Find(id);
-            db.Questions.Remove(questionModel);
+            Major major = db.Major.Find(id);
+            db.Major.Remove(major);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
