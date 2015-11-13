@@ -74,7 +74,7 @@ namespace WebApplication6.Controllers
                         m.To.Add(U.EmailID);
                         m.Subject = "Confirm";
                         m.IsBodyHtml = true;
-                        m.Body = "Click http://localhost:53460/Userpage/userPage to finish registration!";
+                        m.Body = "Click http://localhost:53460/Account/confirmemail finish registration!";
                         sc.Host = "smtp.gmail.com";
                         sc.Port = 587;
                         sc.Credentials = new System.Net.NetworkCredential("selugroup6.maneattraction@gmail.com", "burrisislove");
@@ -93,9 +93,14 @@ namespace WebApplication6.Controllers
                     ViewBag.Message = "Registration Done";
                 }
             }
-            return RedirectToAction("Home" , "Index");
+            return RedirectToAction("Index" , "Home");
         }
 
+        [HttpPost]
+        public int ConfirmEmail(User U)
+        {
+            return U.Active = 1;
+        }
 
         [HttpPost]
         public ActionResult Login(string username, string password)
