@@ -56,15 +56,14 @@ namespace WebApplication6.Controllers
                 using (DataBaseEntities db = new DataBaseEntities())
                 {
 
-                    
 
+                    U.Salt = Crypto.GenerateSalt();
+                    U.Password += U.Salt;
+                    U.Password = Crypto.HashPassword(U.Password);
                     //U.salt = crypto.generatesalt();
                     //U.password += U.salt;
                     //U.password = crypto.hashpassword(U.password);
 
-                    //db.users.add(U);
-                    //db.savechanges();
-                    //modelstate.clear();
 
                     MailMessage m = new MailMessage();
                     SmtpClient sc = new SmtpClient();
@@ -93,6 +92,10 @@ namespace WebApplication6.Controllers
                     ViewBag.Message = "Registration Done";
                 }
             }
+            db.Users.Add(U);
+            db.SaveChanges();
+            ModelState.Clear();
+
             return RedirectToAction("Index" , "Home");
         }
 
