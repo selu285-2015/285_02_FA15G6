@@ -11,8 +11,6 @@ namespace _285ProjectDemo
     {
         public DbSet<User> Users { get; set; }
         public DbSet<QuestionModel> Questions { get; set; }
-        public DbSet<UserAnswers> UserAnswerses { get; set; }
-        public DbSet<Major> Major { get; set; }
-        public DbSet<Concentration> Concentration { get; set; }
+        public DbSet<QuestionCategory> QuestionCategories { get; set; }
     }
 }
