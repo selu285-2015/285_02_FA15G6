@@ -47,7 +47,7 @@ namespace _285ProjectDemo.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Question,Importance")] QuestionModel questionModel)
+        public ActionResult Create([Bind(Include = "ID,Title,Category")] QuestionModel questionModel)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace _285ProjectDemo.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Question,Importance")] QuestionModel questionModel)
+        public ActionResult Edit([Bind(Include = "ID,Title,Category")] QuestionModel questionModel)
         {
             if (ModelState.IsValid)
             {

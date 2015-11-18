@@ -15,7 +15,10 @@ using WebApplication6.Models;
 using System.Web.Helpers;
 using System.Net.Mail;
 using System.Net;
+<<<<<<< HEAD
 using System.Security.Cryptography;
+=======
+>>>>>>> origin/Aaron
 
 namespace WebApplication6.Controllers
 {
@@ -52,6 +55,7 @@ namespace WebApplication6.Controllers
         {
             if (ModelState.IsValid)
             {
+<<<<<<< HEAD
 
                 using (DataBaseEntities db = new DataBaseEntities())
                 {
@@ -66,6 +70,18 @@ namespace WebApplication6.Controllers
                     //db.savechanges();
                     //modelstate.clear();
 
+=======
+                using (DataBaseEntities db = new DataBaseEntities())
+                {
+                    //u.salt = crypto.generatesalt();
+                    //u.password += u.salt;
+                    //u.password = crypto.hashpassword(u.password);
+
+                    //db.users.add(u);
+                    //db.savechanges();
+                    //modelstate.clear();
+                    //
+>>>>>>> origin/Aaron
                     MailMessage m = new MailMessage();
                     SmtpClient sc = new SmtpClient();
                     try
@@ -74,13 +90,21 @@ namespace WebApplication6.Controllers
                         m.To.Add(U.EmailID);
                         m.Subject = "Confirm";
                         m.IsBodyHtml = true;
+<<<<<<< HEAD
                         m.Body = "Click http://localhost:53460/Account/confirmemail finish registration!";
+=======
+                        m.Body = "Click http://localhost:53460/Userpage/userPage to finish registration!";
+>>>>>>> origin/Aaron
                         sc.Host = "smtp.gmail.com";
                         sc.Port = 587;
                         sc.Credentials = new System.Net.NetworkCredential("selugroup6.maneattraction@gmail.com", "burrisislove");
 
                         sc.EnableSsl = true;
                         sc.Send(m);
+<<<<<<< HEAD
+=======
+                        Response.Write("Email Send successfully");
+>>>>>>> origin/Aaron
                     }
                     catch (Exception ex)
                     {
@@ -88,11 +112,16 @@ namespace WebApplication6.Controllers
                     }
                     
                     //
+<<<<<<< HEAD
                     
+=======
+
+>>>>>>> origin/Aaron
                     U = null;
                     ViewBag.Message = "Registration Done";
                 }
             }
+<<<<<<< HEAD
             return RedirectToAction("Index" , "Home");
         }
 
@@ -101,6 +130,11 @@ namespace WebApplication6.Controllers
         {
             return U.Active = 1;
         }
+=======
+            return RedirectToAction("Home" , "Index");
+        }
+
+>>>>>>> origin/Aaron
 
         [HttpPost]
         public ActionResult Login(string username, string password)
@@ -108,6 +142,7 @@ namespace WebApplication6.Controllers
             User validate = db.Users.FirstOrDefault(dbUsers => dbUsers.UserName == username);
             if (validate != null)
             {
+<<<<<<< HEAD
                 if (Crypto.VerifyHashedPassword(validate.Password, password + validate.Salt))
                 {
 
@@ -116,6 +151,13 @@ namespace WebApplication6.Controllers
                 }
             }
             return RedirectToAction("Create");
+=======
+  //              if (Crypto.VerifyHashedPassword(validate.Password, password + validate.Salt))
+                {
+                }
+            }
+            return RedirectToAction("userPage");
+>>>>>>> origin/Aaron
         }
 
     }
