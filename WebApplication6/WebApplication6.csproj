@@ -198,7 +198,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Models\CodeReviewStuff\HomePageModel.cs" />
+=======
+>>>>>>> refs/remotes/origin/master
     <Compile Include="Models\UserData.cs" />
     <Compile Include="Models\UserPageViewModel.cs" />
     <Compile Include="Models\UserViewModel.cs" />
@@ -294,7 +297,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Default\" />
+<<<<<<< HEAD
     <Folder Include="Views\LoginViewModel\" />
+=======
+>>>>>>> refs/remotes/origin/master
     <Folder Include="Views\Manage\" />
   </ItemGroup>
   <ItemGroup>
