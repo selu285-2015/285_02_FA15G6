@@ -1,39 +1,42 @@
 ﻿@model WebApplication6.Models.LoginViewModel
 
 @{
-    ViewBag.Title = "Log in";
+    ViewBag.Title = "Log In |";
 }
 
-<h2>@ViewBag.Title.</h2>
-<div class="row">
-    <div class="col-md-8">
-        <section id="loginForm">
-            <form id="signin" action="~/Users/Login" method="POST">
+<body style="margin: 10px; padding: 30px; font-family: 'Trebuchet MS',verdana;">
+    <h1>Login </h1>
 
-                Username
-                <div class="input-group">
-                    <input id="username" type="text" class="form-control" name="username" required value="">
-                </div>
-                Password
-                <div class="input-group">
-                    <input id="password" type="password" class="form-control" required name="password" value="">
-                </div>
 
-            </form>
+    <div class="row">
+        <div class="col-md-8">
+            <section id="loginForm">
+                <form id="signin" action="~/Users/Login" method="POST">
+
+                    Username
+                    <div class="input-group">
+                        <input id="username" type="text" class="form-control" name="username" required value="">
+                    </div>
+                    Password
+                    <div class="input-group">
+                        <input id="password" type="password" class="form-control" required name="password" value="">
+                    </div>
+
+                </form>
                 @Html.AntiForgeryToken()
                 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                 <div class="form-group">
                     <div class="col-md-offset-2 col-md-10">
-                        <input type="submit" class="btn mybutton" value="Login" onclick="Login"/>
+                        <input type="submit" class="btn mybutton" value="Login" onclick="Login" />
                     </div>
                 </div>
                 <p>
                     @Html.ActionLink("Register as a new user", "Register")
                 </p>
-</section>
+            </section>
+        </div>
     </div>
-  </div>
 
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
