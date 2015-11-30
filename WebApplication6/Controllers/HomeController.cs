@@ -10,7 +10,15 @@ namespace WebApplication6.Controllers
     {
         public ActionResult Index()
         {
+<<<<<<< HEAD
+
+
+
+
+            return View();
+=======
                 return View();
+>>>>>>> refs/remotes/origin/master
         }
 
         public ActionResult About()
